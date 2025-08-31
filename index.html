@@ -1,34 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> AI4LifeScience Tutorials & Talks </title>
+  <title>AI4LifeSciences Tutorials & Talks</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     h1 { color: #2c3e50; }
-    .talk { margin-bottom: 15px; padding: 10px; border-bottom: 1px solid #ddd; }
-    .title { font-size: 18px; font-weight: bold; }
-    .speaker { color: #555; }
-    .tags { font-size: 12px; color: #888; }
+    .tabs {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .tab {
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 6px;
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+    .tab.active {
+      background: #2c3e50;
+      color: white;
+    }
+    .talk {
+      margin-bottom: 15px;
+    }
+    .talk a {
+      font-weight: bold;
+      color: #0044cc;
+      text-decoration: none;
+    }
+    .talk a:hover {
+      text-decoration: underline;
+    }
+    .speaker { font-size: 0.9em; color: #444; }
+    .tags { font-size: 0.8em; color: #777; }
   </style>
 </head>
 <body>
-  <h1>AI4LifeScience Tutorials & Talks</h1>
-  <div id="content"></div>
+  <h1>AI4LifeSciences Tutorials & Talks</h1>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab active" data-category="all">All</div>
+    <div class="tab" data-category="tutorial">Tutorials</div>
+    <div class="tab" data-category="short">Short Talks</div>
+    <div class="tab" data-category="ml">ML Talks</div>
+    <div class="tab" data-category="compbio">Computational Biology</div>
+  </div>
+
+  <!-- Content -->
+  <div id="talks"></div>
+
   <script>
-    fetch('tutorials.json')
+    // Load JSON dynamically
+    fetch("tutorials.json")
       .then(response => response.json())
       .then(data => {
-        const container = document.getElementById('content');
-        data.forEach(t => {
-          const div = document.createElement('div');
-          div.className = 'talk';
-          div.innerHTML = `<div class="title"><a href="${t.url}" target="_blank">${t.title}</a></div>
-                           <div class="speaker">Speaker: ${t.speaker}</div>
-                           <div class="tags">Tags: ${t.tags.join(', ')}</div>`;
-          container.appendChild(div);
+        const talksContainer = document.getElementById("talks");
+        const tabs = document.querySelectorAll(".tab");
+
+        function render(category) {
+          talksContainer.innerHTML = "";
+          let filtered = (category === "all") ? data : data.filter(t => t.category === category);
+          filtered.forEach(talk => {
+            let div = document.createElement("div");
+            div.className = "talk";
+            div.innerHTML = `
+              <a href="${talk.url}" target="_blank">${talk.title}</a><br>
+              <span class="speaker">Speaker: ${talk.speaker}</span><br>
+              <span class="tags">Tags: ${talk.tags.join(", ")}</span>
+            `;
+            talksContainer.appendChild(div);
+          });
+        }
+
+        // Tab switching
+        tabs.forEach(tab => {
+          tab.addEventListener("click", () => {
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            render(tab.dataset.category);
+          });
         });
+
+        // Initial load
+        render("all");
       });
   </script>
 </body>
