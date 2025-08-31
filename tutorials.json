@@ -2,85 +2,60 @@
   {
     "title": "MIT Deep Learning for Genomics – Lecture 1",
     "speaker": "Manolis Kellis",
-    "url": "https://www.youtube.com/watch?v=1OL3idwGJRc",
+    "url": "https://www.youtube.com/watch?v=k8POKryDxAE",
     "tags": ["genomics", "deep learning", "tutorial"],
     "category": "tutorial"
   },
   {
     "title": "AI for Drug Design: Challenges & Opportunities",
     "speaker": "Regina Barzilay",
-    "url": "https://www.youtube.com/watch?v=5U8E0NB2jS4",
+    "url": "https://www.youtube.com/watch?v=LG7DocXT_8Q",
     "tags": ["drug discovery", "medicine", "ai"],
     "category": "short"
   },
   {
     "title": "Contextual AI Models for Single-cell Protein Biology",
     "speaker": "Michelle Li",
-    "url": "https://www.youtube.com/watch?v=ncmCwcAipH0",
+    "url": "https://www.youtube.com/watch?v=VO0sP8E_Q3I",
     "tags": ["single-cell", "protein", "ai"],
     "category": "compbio"
   },
   {
     "title": "Deep Learning for Genomics: Introduction",
     "speaker": "James Zou",
-    "url": "https://www.youtube.com/watch?v=Y5IGxA0t7zE",
+    "url": "https://www.youtube.com/watch?v=JYt1IqdDAPc",
     "tags": ["genomics", "deep learning"],
     "category": "tutorial"
   },
   {
     "title": "When AI Meets Biology: Learning Single-Cell Atlases",
     "speaker": "Fabian Theis",
-    "url": "https://www.youtube.com/watch?v=YjsUMv3DkN8",
+    "url": "https://www.youtube.com/watch?v=ViX0qsqM_E4",
     "tags": ["single-cell", "biology", "ai"],
     "category": "compbio"
   },
-  {
-    "title": "Introduction to Single-cell RNA-seq Analysis",
-    "speaker": "Ming Tommy (BioTuring)",
-    "url": "https://www.youtube.com/watch?v=6xzV1j3p0t8",
-    "tags": ["rna-seq", "tutorial", "genomics"],
-    "category": "tutorial"
-  },
+
   {
     "title": "Deep Learning Models for Genomes & Beyond",
     "speaker": "Olga Troyanskaya",
-    "url": "https://www.youtube.com/watch?v=lP4rKqkCVrM",
+    "url": "https://www.youtube.com/watch?v=M7RyuC9CM3s",
     "tags": ["genomics", "deep learning"],
     "category": "ml"
   },
   {
     "title": "AI, Single-Cell Genomics, and the New Era of Computational Biology",
     "speaker": "Tali Raveh",
-    "url": "https://www.youtube.com/watch?v=p5p3PHtD1sY",
+    "url": "https://www.youtube.com/watch?v=YqK9BJGyGDA",
     "tags": ["computational biology", "ai", "genomics"],
     "category": "compbio"
   },
+
   {
-    "title": "Deep Learning for Biology",
-    "speaker": "Aviv Regev",
-    "url": "https://www.youtube.com/watch?v=K7n2gk4JQ2w",
-    "tags": ["genomics", "biology", "deep learning"],
-    "category": "ml"
-  },
-  {
-    "title": "AI in Biomedicine",
+    "title": "Genomics, Imaging and AI",
     "speaker": "Ewan Birney",
-    "url": "https://www.youtube.com/watch?v=cbno9n6r7W8",
+    "url": "https://www.youtube.com/watch?v=DbFsvH9_ew8",
     "tags": ["medicine", "ai", "biology"],
     "category": "short"
-  },
-  {
-    "title": "Machine Learning in Biology & Medicine",
-    "speaker": "Barbara Engelhardt",
-    "url": "https://www.youtube.com/watch?v=InlGtU3z8po",
-    "tags": ["ml", "medicine", "biology"],
-    "category": "ml"
-  },
-  {
-    "title": "From Genomes to Cells with Deep Learning",
-    "speaker": "Sara Mostafavi",
-    "url": "https://www.youtube.com/watch?v=j4gDhzFw6M8",
-    "tags": ["genomics", "cells", "deep learning"],
-    "category": "tutorial"
   }
+  
 ]
