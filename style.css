@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+h1 { text-align: center; }
+#filters { margin: 10px 0; text-align: center; }
+#filters select, #search { margin: 5px; padding: 5px; }
+#results { display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); gap: 15px; margin-top: 20px; }
+.card { background: #fff; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.card h3 { margin-top: 0; }
+.card a { color: #007acc; text-decoration: none; }
